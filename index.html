@@ -34,7 +34,7 @@
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="#">Navbar</a>
+				<a class="navbar-brand" href="#">La bonne sape</a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -49,10 +49,10 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
+							<a class="nav-link active" aria-current="page" href="#">Accueil</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Link</a>
+							<a class="nav-link" href="#">Nos produits</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a
@@ -63,7 +63,7 @@
 								data-bs-toggle="dropdown"
 								aria-expanded="false"
 							>
-								Dropdown
+								Catégorie
 							</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<li><a class="dropdown-item" href="#">Action</a></li>
@@ -75,87 +75,325 @@
 							</ul>
 						</li>
 					</ul>
-					<button class="btn btn-outline-success" type="submit">Voir mon panier</button>
+					<button
+						data-bs-toggle="modal"
+						data-bs-target="#voir"
+						id="voir_mon_pan"
+						class="btn btn-outline-success"
+						type="submit"
+					>
+						Voir mon panier
+					</button>
 				</div>
 			</div>
 		</nav>
 		<div class="contains my-5">
-			<div class="card " style="width: 18rem">
+			<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">Captain</h5>
-                    <div>
-                    <img src="assets/img1.png" alt="hey">
-                    </div>
+					<div>
+						<img src="assets/img1.png" alt="hey" />
+					</div>
 					<p class="card-text">
 						Il n'y a pas mieux que les avengers, mais ils coûtent pas le même !
 					</p>
-					<a id="ajout1"  href="#" class="btn btn-primary">Ajouter au panier</a>
+					<a
+						data-bs-toggle="modal"
+						data-bs-target="#valider_infos_panier"
+						id="ajout1"
+						href="#"
+						class="btn btn-primary"
+						>Ajouter au panier</a
+					>
 				</div>
 			</div>
 			<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">Deadpool</h5>
-                    <div>
-                        <img src="assets/img2.png" alt="hey">
-                        </div>
+					<div>
+						<img src="assets/img2.png" alt="hey" />
+					</div>
 					<p class="card-text">
 						Il n'y a pas mieux que les avengers, mais ils coûtent pas le même !
 					</p>
-					<a id="ajout2"  href="#" class="btn btn-primary">Ajouter au panier</a>
+					<a id="ajout2" href="#" class="btn btn-primary">Ajouter au panier</a>
 				</div>
 			</div>
 			<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">Iron man</h5>
-                    <div>
-                        <img src="assets/img3.png" alt="hey">
-                        </div>
+					<div>
+						<img src="assets/img3.png" alt="hey" />
+					</div>
 					<p class="card-text">
 						Il n'y a pas mieux que les avengers, mais ils coûtent pas le même !
 					</p>
-					<a  id="ajout3" href="#" class="btn btn-primary">Ajouter au panier</a>
+					<a id="ajout3" href="#" class="btn btn-primary">Ajouter au panier</a>
 				</div>
 			</div>
 			<div class="card" style="width: 18rem">
 				<div class="card-body">
-                    <h5 class="card-title">Le vrai iron man</h5>
+					<h5 class="card-title">Le vrai iron man</h5>
 					<div>
-                        <img src="assets/img4.jpg" alt="hey">
-                        </div>
+						<img src="assets/img4.jpg" alt="hey" />
+					</div>
 					<p class="card-text">
 						Il n'y a pas mieux que les avengers, mais ils coûtent pas le même !
 					</p>
-					<a id="ajout4"  href="#" class="btn btn-primary">Ajouter au panier</a>
+					<a id="ajout4" href="#" class="btn btn-primary">Ajouter au panier</a>
 				</div>
 			</div>
 			<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">Marteau de thor</h5>
-                    <div>
-                        <img src="assets/img5.jpg" alt="hey">
-                        </div>
+					<div>
+						<img src="assets/img5.jpg" alt="hey" />
+					</div>
 					<p class="card-text">
 						Il n'y a pas mieux que les avengers, mais ils coûtent pas le même !
 					</p>
-					<a id="ajout5"  href="#" class="btn btn-primary">Ajouter au panier</a>
+					<a id="ajout5" href="#" class="btn btn-primary">Ajouter au panier</a>
 				</div>
 			</div>
 			<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">Thor</h5>
-                    <div>
-                        <img src="assets/img6.png" alt="hey">
-                        </div>
+					<div>
+						<img src="assets/img6.png" alt="hey" />
+					</div>
 					<p class="card-text">
 						Il n'y a pas mieux que les avengers, mais ils coûtent pas le même !
 					</p>
-					<a id="ajout6"  href="#" class="btn btn-primary">Ajouter au panier</a>
+					<a id="ajout6" href="#" class="btn btn-primary">Ajouter au panier</a>
 				</div>
 			</div>
 		</div>
-        <!-- Vertically centered scrollable modal -->
-<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    modale ici
-  </div>
+		<!-- Vertically centered scrollable modal -->
+		<div position="relative">
+			<div
+				id="voir"
+				class="modal fade"
+				id="staticBackdrop"
+				data-bs-backdrop="static"
+				data-bs-keyboard="false"
+				tabindex="-1"
+				aria-labelledby="staticBackdropLabel"
+				aria-hidden="true"
+			>
+				<div class="position-absolute top-0 end-0 modal-dialog modal_droit">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="staticBackdropLabel">Mon panier</h5>
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+						<p class="p-3">
+							Voici la liste de vos produits vous pouvez augmenter la quantité
+							si vous souhaitez
+						</p>
+						<div class="valide">
+							<p><strong class="fs-3">Total : </strong><span></span></p>
+							<button
+								data-bs-toggle="modal"
+								data-bs-target="#infos"
+								class="btn btn-primary"
+								type="submit"
+							>
+								Valider la commande
+							</button>
+						</div>
+
+						<div
+							class="card voir_marg mx-3 w-75 modal_droit"
+							style="width: 18rem"
+						>
+							<div class="card-body">
+								<h6 class="card-title">
+									Désignation : <span class="designation"></span>
+								</h6>
+								<p class="card-text">
+									Some quick example text to build on the card title and make up
+									the bulk of the card's content.
+								</p>
+								<form action="">
+									<label for="quantity">Quantité</label>
+									<input class="my-2" type="text" name="" id="quantity" />
+									<p>Prix : <strong></strong></p>
+								</form>
+								<button type="button" class="btn btn-danger danger_droit">
+									Supprimer
+								</button>
+							</div>
+						</div>
+
+						<div
+							class="position-relative card mx-3 w-75 card_modal_droit_2"
+							style="width: 18rem"
+						>
+							<div class="card-body modal_droit">
+								<h6 class="card-title">
+									Désignation : <span class="designation"></span>
+								</h6>
+								<p class="card-text">
+									Some quick example text to build on the card title and make up
+									the bulk of the card's content.
+								</p>
+								<form action="">
+									<label for="quantity">Quantité</label>
+									<input class="my-2" type="text" name="" id="quantity" />
+									<p>Prix : <strong></strong></p>
+								</form>
+								<button type="button" class="btn btn-danger danger_droit">
+									Supprimer
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--2ème modal-->
+		<div
+			class="modal fade"
+			id="infos"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog position-absolute top-0 start-0">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">
+							Valider ma commande
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<p class="p-3">
+						Veuillez rentrer vos informations dans les champs de saisi
+						ci-dessous.
+					</p>
+					<form class="form-floating">
+						<div class="form-floating m-3">
+							<input
+								type="text"
+								class="form-control"
+								id="nom"
+								placeholder="nom"
+							/>
+							<label for="nom">Nom</label>
+						</div>
+						<div class="form-floating m-3">
+							<input
+								type="text"
+								class="form-control"
+								id="prenom"
+								placeholder="prenom"
+							/>
+							<label for="prenom">Prenom</label>
+						</div>
+						<div class="form-floating m-3">
+							<input
+								type="text"
+								class="form-control"
+								id="adresse"
+								placeholder="Adresse"
+							/>
+							<label for="adresse">Adresse</label>
+						</div>
+						<div class="form-floating mb-3 m-3">
+							<input
+								type="email"
+								class="form-control"
+								id="email"
+								placeholder="name@example.com"
+							/>
+							<label for="email">Email</label>
+						</div>
+						<div class="form-floating m-3">
+							<input
+								type="text"
+								class="form-control"
+								id="adresse"
+								placeholder="Adresse"
+							/>
+							<label for="adresse">Adresse</label>
+							<button type="button" class="btn btn-primary m-3">
+								Enregistrer
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+        <div
+			class="modal fade "
+			id="valider_infos_panier"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">
+							Valider mes informations et mon panier
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<p class="p-3 fs-3">
+						Vos informations
+					</p>
+                    <div class="dflex m-3">
+                        <p>
+                        Nom : <span class="valid_nom"></span>
+                    </p>
+                    <p>
+                        Prénom : <span class="valid_prenom"></span>
+                    </p>
+                    </div>
+                    <div class="dflex m-3">
+                        <p>
+                        N°Tel : <span class="valid_tel"></span>
+                    </p>
+                    <p>
+                        Email : <span class="valid_email"></span>
+                    </p>
+                    </div>
+                    <div class="dflex m-3">
+                        <p>
+                        Adresse : <span class="valid_adress"></span>
+                    </p>
+                    </div>
+                    <p class="p-3 fs-3">Votre panier</p>
+					<strong id="valid_product"></strong>
+                    <div>
+                        <p class="m-3">Prix unitaire : <strong></strong></p>
+                        <p class="m-3">Quantité : <strong></strong></p>
+                    </div>
+                    <hr class=" dlfex m-3">
+                    <strong id="valid_product2"></strong>
+                    <div>
+                        <p class="dlfex m-3">Prix unitaire : <strong></strong></p>
+                        <p class="deflex m-3" >Quantité : <strong></strong></p>
+                    </div>
+                    <hr>
+                    <button class="btn btn-primary m-3" type="submit">Finaliser la commande et payer</button>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

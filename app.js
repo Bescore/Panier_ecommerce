@@ -40,4 +40,6 @@ var voir_panier_btn_4 = document.querySelector( "#ajout4" )
 var voir_panier_btn_5 = document.querySelector( "#ajout5" )
 var voir_panier_btn_6 = document.querySelector( "#ajout6" )
 
-console.log(voir_panier_btn_1)
+
+
+console.log( "" )
