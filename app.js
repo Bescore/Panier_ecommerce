@@ -42,4 +42,9 @@ var voir_panier_btn_6 = document.querySelector( "#ajout6" )
 
 
 
-console.log( "" )
+produit.forEach( element => {
+    var img = document.querySelectorAll( '.card_img' )
+    for (let i = 0; i < img.length; i++) {
+     img[i].Attribute('src')==element.image
+    }
+});
