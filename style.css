@@ -23,7 +23,7 @@ body{
 
 .valide{
     display:flex;
-    gap: 40%;
+    gap: 30%;
     align-items: center;
     justify-content: center;
 }

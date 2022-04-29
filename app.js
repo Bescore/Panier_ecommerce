@@ -77,24 +77,21 @@ for ( let e = 0; e < card_titre.length; e++ ) {
 }
 //////////////////////////////////////////////////////////////
 var panier = []
+
 ajout.forEach( elemente => {
     elemente.addEventListener( 'click', () => {
-        elemente.style.display="none"
+        elemente.style.display = "none"
         var titre = elemente.parentNode.childNodes[ 1 ].innerText
         var coûter = elemente.previousElementSibling.childNodes[ 1 ].innerText.replace( '€', "" )
         var nb = 1
-        
-        console.log(document.querySelectorAll( '.box'))
-        
-            var crea = document.createElement( 'div' )
-            crea.innerHTML = `<div  class=" card-body ">
+
+        console.log()
+
+        var crea = document.createElement( 'div' )
+        crea.innerHTML = `<div  class=" card-body ">
            <h6 class="card-title">
-               Désignation : <span class="designation">${ titre}</span>
+               Désignation : <span class="designation">${ titre }</span>
            </h6>
-           <p class="card-text">
-               Some quick example text to build on the card title and make up
-               the bulk of the card's content.
-           </p>
            <form action="">
                <label for="quantity">Quantité</label>
                <input class="my-2 box " value="${ nb }" type="number" name="" id="quantity" />
@@ -104,23 +101,60 @@ ajout.forEach( elemente => {
                Supprimer
            </button>
        </div>`
-            document.querySelector( '.lacarte' ).appendChild( crea )
-            document.querySelectorAll('.box').forEach(element => {
-                element.addEventListener( 'keyup', function () {
-                    var calcou = elemente.parentNode.childNodes[7].childNodes[1].innerText.replace('€',"")
-                    if (  element.value == "" ) {
-                        coûter = elemente.parentNode.childNodes[7].childNodes[1].innerText.replace('€',"")
-                    } else {
-                        coûter =calcou * parseInt( element.value )
-                        element.nextElementSibling.childNodes[ 1 ].innerText = coûter
-                    }
-                } )
-                    
-                
-            });
-        
-        
+        document.querySelector( '.lacarte' ).appendChild( crea )
+        document.querySelectorAll( '.box' ).forEach( element => {
+            var tot = []
+
+            element.addEventListener( 'change', function () {
+
+                var calcou = elemente.parentNode.childNodes[ 7 ].childNodes[ 1 ].innerText.replace( '€', "" )
+                if ( element.value == "" ) {
+                    coûter = elemente.parentNode.childNodes[ 7 ].childNodes[ 1 ].innerText.replace( '€', "" )
+                } else {
+                    coûter = calcou * parseInt( element.value )
+                    element.nextElementSibling.childNodes[ 1 ].innerText = coûter
+
+                }
+                var sum = 0
+                document.querySelectorAll( '.coûteux' ).forEach( element => {
+                    sum += parseInt( element.innerText )
+                    document.querySelector( ".total" ).innerText = sum
+                } );
+            } )
+        } );
     } )
-    
 } );
 
+////////////////////////2ème modal//////////////////////////
+
+var inputs = document.querySelectorAll( "input[type=text]" )
+
+console.log( document.querySelectorAll( "input[type=text]" ) )
+
+
+for ( let i = 0; i < inputs.length; i++ ) {
+    console.log(inputs[0])
+    var reg_nom_prenom = /^[a-zA-Z- ]+$/
+    var reg_mail = /^[a-zA-Z0-9._%-]+[@]+[a-zA-Z0-9.-]+[.]+[a-zA-Z]{2,4}$/
+    
+var req_adresse=/[0-9]{1,3}(?:(?:[,. ]){1}[-a-zA-Zàâäéèêëïîôöùûüç]+)+/
+    function conTrol(puts,regex){
+        puts.addEventListener( "keyup", function () {
+            if ( !regex.test( puts.value ) ) {
+                puts.style.backgroundColor = "#f76f72"
+            } else {
+                puts.style.backgroundColor = "#e9effd"
+            }
+        })
+        
+    }
+    conTrol( inputs[ 0 ], reg_nom_prenom ), conTrol( inputs[ 1 ], reg_nom_prenom ), conTrol( inputs[ 2 ], reg_mail ),conTrol( inputs[ 4 ], req_adresse )
+    
+    $( inputs[ 3 ] ).keyup( function () {
+        if ( $( inputs[ 3 ] ).val().length > 10 || isNaN( $( inputs[ 3 ] ).val() ) ) {
+            inputs[3].style.backgroundColor = "#f76f72"
+        } else {
+            inputs[3].style.backgroundColor = "#e9effd"
+        }
+    })
+}
