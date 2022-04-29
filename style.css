@@ -1,45 +1,43 @@
-.contains{
-display: flex;
-width: 50%;
-margin:auto;
-flex-wrap: wrap;
-gap: 20px;
-}
-img{
-    width: 100%;
-    height: 200px;
-    object-fit: fill;
-}
-.centré{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+img {
+	width: 100%;
+	height: 200px;
+	object-fit: fill;
 }
 
-body{
-    position: relative;
+body {
+	position: relative;
 }
 
-.valide{
-    display:flex;
-    gap: 30%;
-    align-items: center;
-    justify-content: center;
+.valide {
+	display: flex;
+	gap: 30%;
+	align-items: center;
+	justify-content: center;
 }
-.voir_marg{
-    margin-top:10px;
+.voir_marg {
+	margin-top: 10px;
 }
-.card_modal_droit_2{
-    margin-bottom: 40px;
+.card_modal_droit_2 {
+	margin-bottom: 40px;
 }
-.card{
-    min-width: 180px !important;
+.card {
+	min-width: 180px !important;
 }
-.dflex{
-    display: flex;
-    gap: 20%;
+.dflex {
+	display: flex;
+	gap: 20%;
 }
-.mod{
-    overflow-y: scroll;
+.mod {
+	overflow-y: scroll;
+}
+#container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	gap: 20px;
+	flex-wrap: wrap;
+
+	width: 50%;
 }

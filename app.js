@@ -1,7 +1,7 @@
 var produit = [
     {
         nom: 'Blouson Cuir Homme OSX',
-        image: 'https://image.made-in-china.com/202f0j00HSaWQyvcEMbe/Fashion-Party-Gauze-Skirt-Sexy-Diagonal-Shoulder-Bandage-Hip-Perspective-Dress.jpg',
+        image: 'https://s1.rockagogostatic.com/ref/pls/pls15/blouson-cuir-mec-marque-osx-brando-jacket-pr.jpg',
         descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
         prix: 225
     },
@@ -25,13 +25,13 @@ var produit = [
     },
     {
         nom: 'Pantalon jogging Nike Just Do It - Noir',
-        image: 'https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27065771_40_R.jpg?ts=1640188185591&imwidth=412&imdensity=2',
+        image: 'https://api.vs.prod.footkorner.nbs-aws.com/img/600/744/resize/catalog/product/f/o/footkorner-pantalon-nike-just-do-it-cu4050-010-noir_1_.jpeg',
         descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
         prix: 27
     },
     {
-        nom: 'Pantalon femme - Noir',
-        image: 'https://www.lahalle.com/dw/image/v2/BCHM_PRD/on/demandware.static/-/Sites-lahalle_master/default/dw81327dac/jeans-slim-taille-standard-denim-double-stone-femme-a-36165600460480425.jpg?sw=702&sh=702',
+        nom: 'Robe verte ',
+        image: 'https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27065771_40_R.jpg?ts=1640188185591&imwidth=412&imdensity=2',
         descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
         prix: 38
     }
@@ -45,6 +45,33 @@ var price = document.querySelectorAll( '.price' )
 var card_titre = document.querySelectorAll( '.card-title' )
 var ajout = document.querySelectorAll( '.ajout' )
 
+for ( let i = 0; i < produit.length; i++ ) {
+    const element = produit[ i ];
+
+    $( '#container' ).append( `<div class="my-2">
+    <div class="card" style="width: 18rem">
+        <div class="card-body">
+            <h5 class="card-title">${ element.nom }</h5>
+            <div class="card_img">
+                <img  src="${ element.image }" alt="hey" />
+            </div>
+            <p class="card-text">
+            ${ element.descrption }
+            </p>
+            <p>Prix : <span class="price">${ element.prix } €</span></p>
+            <a
+                data-bs-toggle="modal"
+                data-bs-target="#valider_infos_panier"
+                
+                href="#"
+                class="btn btn-primary ajout"
+                >Ajouter au panier</a
+            >
+        </div>
+    </div>`)
+
+}
+/*
 for ( let e = 0; e < price.length; e++ ) {
     const el = price;
 
@@ -74,7 +101,7 @@ for ( let e = 0; e < card_titre.length; e++ ) {
         }
         cardi_titre( 0 ); cardi_titre( 1 ); cardi_titre( 2 ); cardi_titre( 3 ); cardi_titre( 4 ); cardi_titre( 5 )
     }
-}
+}*/
 //////////////////////////////////////////////////////////////
 var panier = []
 
@@ -133,36 +160,36 @@ console.log( document.querySelectorAll( "input[type=text]" ) )
 
 
 for ( let i = 0; i < inputs.length; i++ ) {
-    console.log(inputs[0])
+    console.log( inputs[ 0 ] )
     var reg_nom_prenom = /^[a-zA-Z- ]+$/
     var reg_mail = /^[a-zA-Z0-9._%-]+[@]+[a-zA-Z0-9.-]+[.]+[a-zA-Z]{2,4}$/
-    
-var req_adresse=/[0-9]{1,3}(?:(?:[,. ]){1}[-a-zA-Zàâäéèêëïîôöùûüç]+)+/
-    function conTrol(puts,regex){
+
+    var req_adresse = /[0-9]{1,3}(?:(?:[,. ]){1}[-a-zA-Zàâäéèêëïîôöùûüç]+)+/
+    function conTrol ( puts, regex ) {
         puts.addEventListener( "keyup", function () {
             if ( !regex.test( puts.value ) ) {
                 puts.style.backgroundColor = "#f76f72"
-                
-                
+
+
             } else {
                 puts.style.backgroundColor = "#e9effd"
-                
-                
+
+
             }
-        })
-        
+        } )
+
     }
-    conTrol( inputs[ 0 ], reg_nom_prenom ), conTrol( inputs[ 1 ], reg_nom_prenom ), conTrol( inputs[ 2 ], reg_mail ),conTrol( inputs[ 4 ], req_adresse )
-    
+    conTrol( inputs[ 0 ], reg_nom_prenom ), conTrol( inputs[ 1 ], reg_nom_prenom ), conTrol( inputs[ 2 ], reg_mail ), conTrol( inputs[ 4 ], req_adresse )
+
     $( inputs[ 3 ] ).keyup( function () {
         if ( $( inputs[ 3 ] ).val().length > 10 || isNaN( $( inputs[ 3 ] ).val() ) ) {
             inputs[ 3 ].style.backgroundColor = "#f76f72"
-            
+
         } else {
             inputs[ 3 ].style.backgroundColor = "#e9effd"
-            
+
         }
-        
-    })
+
+    } )
 }
 
