@@ -142,8 +142,12 @@ var req_adresse=/[0-9]{1,3}(?:(?:[,. ]){1}[-a-zA-Zàâäéèêëïîôöùûüç
         puts.addEventListener( "keyup", function () {
             if ( !regex.test( puts.value ) ) {
                 puts.style.backgroundColor = "#f76f72"
+                
+                
             } else {
                 puts.style.backgroundColor = "#e9effd"
+                
+                
             }
         })
         
@@ -152,9 +156,13 @@ var req_adresse=/[0-9]{1,3}(?:(?:[,. ]){1}[-a-zA-Zàâäéèêëïîôöùûüç
     
     $( inputs[ 3 ] ).keyup( function () {
         if ( $( inputs[ 3 ] ).val().length > 10 || isNaN( $( inputs[ 3 ] ).val() ) ) {
-            inputs[3].style.backgroundColor = "#f76f72"
+            inputs[ 3 ].style.backgroundColor = "#f76f72"
+            
         } else {
-            inputs[3].style.backgroundColor = "#e9effd"
+            inputs[ 3 ].style.backgroundColor = "#e9effd"
+            
         }
+        
     })
 }
+
