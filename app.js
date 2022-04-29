@@ -1,50 +1,126 @@
 var produit = [
     {
-    nom: 'Blouson Cuir Homme OSX',
-    image: 'https://s1.rockagogostatic.com/ref/pls/pls15/blouson-cuir-mec-marque-osx-brandojacket-pr.jpg',
-    descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
-    prix: 225
+        nom: 'Blouson Cuir Homme OSX',
+        image: 'https://image.made-in-china.com/202f0j00HSaWQyvcEMbe/Fashion-Party-Gauze-Skirt-Sexy-Diagonal-Shoulder-Bandage-Hip-Perspective-Dress.jpg',
+        descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
+        prix: 225
     },
     {
-    nom: 'POLO CINTRE SLIM FIT EN COTON BASIC Bleu',
-    image: 'https://photos6.spartoo.com/photos/188/18830673/18830673_500_A.jpg',
-    descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
+        nom: 'polo cintre slim fit en coton basic bleu',
+        image: 'https://photos6.spartoo.com/photos/188/18830673/18830673_500_A.jpg',
+        descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
         prix: 75
     },
     {
-    nom: 'Robe rose croisée à boucler',
-    image: 'https://m1.quebecormedia.com/emp/emp/A1_2_1_d64e884e-d21e-41ab-8eb0-2baf6b656c00_ORIGINAL.jpg?impolicy=cropresize&x=0&y=0&w=802&h=1086&width=925&height=925',
-    descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
-    prix: 50
+        nom: 'Robe rose croisée à boucler',
+        image: 'https://m1.quebecormedia.com/emp/emp/A1_2_1_d64e884e-d21e-41ab-8eb0-2baf6b656c00_ORIGINAL.jpg?impolicy=cropresize&x=0&y=0&w=802&h=1086&width=925&height=925',
+        descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
+        prix: 50
     },
     {
-    nom: 'Sneakers Adidas Original Homme',
-    image: 'https://www.kiffoo.com/7220-large_default/basket-adidas-original-homme.jpg',
-    descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
-    prix: 159
+        nom: 'Sneakers Adidas Original Homme',
+        image: 'https://www.kiffoo.com/7220-large_default/basket-adidas-original-homme.jpg',
+        descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
+        prix: 159
     },
     {
-    nom: 'Pantalon jogging Nike Just Do It - Noir',
-    image: 'https://api.vs.prod.footkorner.nbsaws.com/img/600/744/resize/catalog/product/f/o/footkorner-pantalon-nike-just-do-it-cu4050-010-noir_1_.jpeg',
-    descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
-    prix: 27
+        nom: 'Pantalon jogging Nike Just Do It - Noir',
+        image: 'https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27065771_40_R.jpg?ts=1640188185591&imwidth=412&imdensity=2',
+        descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
+        prix: 27
+    },
+    {
+        nom: 'Pantalon femme - Noir',
+        image: 'https://www.lahalle.com/dw/image/v2/BCHM_PRD/on/demandware.static/-/Sites-lahalle_master/default/dw81327dac/jeans-slim-taille-standard-denim-double-stone-femme-a-36165600460480425.jpg?sw=702&sh=702',
+        descrption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.',
+        prix: 38
     }
 ];
-    
+
 /////ouvrir le modal//
 
-var voir_panier_btn_1 = document.querySelector( "#ajout1" )
-var voir_panier_btn_2 = document.querySelector( "#ajout2" )
-var voir_panier_btn_3 = document.querySelector( "#ajout3" )
-var voir_panier_btn_4 = document.querySelector( "#ajout4" )
-var voir_panier_btn_5 = document.querySelector( "#ajout5" )
-var voir_panier_btn_6 = document.querySelector( "#ajout6" )
 
+var img = document.querySelectorAll( '.card_img' )
+var price = document.querySelectorAll( '.price' )
+var card_titre = document.querySelectorAll( '.card-title' )
+var ajout = document.querySelectorAll( '.ajout' )
 
+for ( let e = 0; e < price.length; e++ ) {
+    const el = price;
 
-produit.forEach( element => {
-    var img = document.querySelectorAll( '.card_img' )
-    for (let i = 0; i < img.length; i++) {
-     img[i].Attribute('src')==element.image
+    for ( let i = 0; i < produit.length; i++ ) {
+        var et = produit
+        function prix ( par ) {
+            el[ par ].innerHTML = et[ par ].prix + ' €'
+        }
+        prix( 0 ); prix( 1 ); prix( 2 ); prix( 3 ); prix( 4 ); prix( 5 )
     }
-});
+}
+for ( let e = 0; e < img.length; e++ ) {
+
+    for ( let i = 0; i < produit.length; i++ ) {
+        var et = produit
+        function image ( p ) {
+            img[ p ].innerHTML = `<img src="${ et[ p ].image }" alt="nope">`
+        }
+        image( 0 ); image( 1 ); image( 2 ); image( 3 ); image( 4 ); image( 5 )
+    }
+}
+for ( let e = 0; e < card_titre.length; e++ ) {
+    for ( let i = 0; i < produit.length; i++ ) {
+        var et = produit
+        function cardi_titre ( p ) {
+            card_titre[ p ].innerHTML = `${ et[ p ].nom } `
+        }
+        cardi_titre( 0 ); cardi_titre( 1 ); cardi_titre( 2 ); cardi_titre( 3 ); cardi_titre( 4 ); cardi_titre( 5 )
+    }
+}
+//////////////////////////////////////////////////////////////
+var panier = []
+ajout.forEach( elemente => {
+    elemente.addEventListener( 'click', () => {
+        elemente.style.display="none"
+        var titre = elemente.parentNode.childNodes[ 1 ].innerText
+        var coûter = elemente.previousElementSibling.childNodes[ 1 ].innerText.replace( '€', "" )
+        var nb = 1
+        
+        console.log(document.querySelectorAll( '.box'))
+        
+            var crea = document.createElement( 'div' )
+            crea.innerHTML = `<div  class=" card-body ">
+           <h6 class="card-title">
+               Désignation : <span class="designation">${ titre}</span>
+           </h6>
+           <p class="card-text">
+               Some quick example text to build on the card title and make up
+               the bulk of the card's content.
+           </p>
+           <form action="">
+               <label for="quantity">Quantité</label>
+               <input class="my-2 box " value="${ nb }" type="number" name="" id="quantity" />
+               <p>Prix : <strong class="coûteux">${ coûter } €</strong></p>
+           </form>
+           <button type="button" class="btn btn-danger danger_droit">
+               Supprimer
+           </button>
+       </div>`
+            document.querySelector( '.lacarte' ).appendChild( crea )
+            document.querySelectorAll('.box').forEach(element => {
+                element.addEventListener( 'keyup', function () {
+                    var calcou = elemente.parentNode.childNodes[7].childNodes[1].innerText.replace('€',"")
+                    if (  element.value == "" ) {
+                        coûter = elemente.parentNode.childNodes[7].childNodes[1].innerText.replace('€',"")
+                    } else {
+                        coûter =calcou * parseInt( element.value )
+                        element.nextElementSibling.childNodes[ 1 ].innerText = coûter
+                    }
+                } )
+                    
+                
+            });
+        
+        
+    } )
+    
+} );
+

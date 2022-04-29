@@ -91,18 +91,19 @@
 			<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">Captain</h5>
-					<div>
-						<img class="card_img" src="assets/img1.png" alt="hey" />
+					<div class="card_img">
+						<img  src="assets/img1.png" alt="hey" />
 					</div>
 					<p class="card-text">
 						Il n'y a pas mieux que les avengers, mais ils coûtent pas le même !
 					</p>
+					<p>Prix : <span class="price"></span></p>
 					<a
 						data-bs-toggle="modal"
 						data-bs-target="#valider_infos_panier"
-						id="ajout1"
+						
 						href="#"
-						class="btn btn-primary"
+						class="btn btn-primary ajout"
 						>Ajouter au panier</a
 					>
 				</div>
@@ -110,61 +111,70 @@
 			<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">Deadpool</h5>
-					<div>
-						<img class="card_img" src="assets/img2.png" alt="hey" />
+					<div class="card_img">
+						<img  src="assets/img2.png" alt="hey" />
 					</div>
+					
 					<p class="card-text">
 						Il n'y a pas mieux que les avengers, mais ils coûtent pas le même !
 					</p>
-					<a id="ajout2" href="#" class="btn btn-primary">Ajouter au panier</a>
+					<p>Prix : <span class="price"></span></p>
+					<a  href="#" class="btn btn-primary ajout">Ajouter au panier</a>
 				</div>
 			</div>
 			<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">Iron man</h5>
-					<div>
-						<img class="card_img"  src="assets/img3.png" alt="hey" />
+					<div class="card_img">
+						<img   src="assets/img3.png" alt="hey" />
 					</div>
 					<p class="card-text">
 						Il n'y a pas mieux que les avengers, mais ils coûtent pas le même !
 					</p>
-					<a id="ajout3" href="#" class="btn btn-primary">Ajouter au panier</a>
+					<p>Prix : <span class="price"></span></p>
+					<a  href="#" class="btn btn-primary ajout">Ajouter au panier</a>
 				</div>
 			</div>
 			<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">Le vrai iron man</h5>
-					<div>
-						<img class="card_img" src="assets/img4.jpg" alt="hey" />
+					<div class="card_img">
+						<img  src="assets/img4.jpg" alt="hey" />
 					</div>
+					
 					<p class="card-text">
 						Il n'y a pas mieux que les avengers, mais ils coûtent pas le même !
 					</p>
-					<a id="ajout4" href="#" class="btn btn-primary">Ajouter au panier</a>
+					<p>Prix : <span class="price"></span></p>
+					<a  href="#" class="btn btn-primary ajout">Ajouter au panier</a>
 				</div>
 			</div>
 			<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">Marteau de thor</h5>
-					<div>
-						<img class="card_img" src="assets/img5.jpg" alt="hey" />
+					<div class="card_img">
+						<img  src="assets/img5.jpg" alt="hey" />
 					</div>
+					
 					<p class="card-text">
 						Il n'y a pas mieux que les avengers, mais ils coûtent pas le même !
 					</p>
-					<a id="ajout5" href="#" class="btn btn-primary">Ajouter au panier</a>
+					<p>Prix : <span class="price"></span></p>
+					<a  href="#" class="btn btn-primary ajout">Ajouter au panier</a>
 				</div>
 			</div>
 			<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">Thor</h5>
-					<div>
-						<img class="card_img" src="assets/img6.png" alt="hey" />
+					<div class="card_img">
+						<img  src="assets/img6.png" alt="hey" />
 					</div>
+					
 					<p class="card-text">
 						Il n'y a pas mieux que les avengers, mais ils coûtent pas le même !
 					</p>
-					<a id="ajout6" href="#" class="btn btn-primary">Ajouter au panier</a>
+					<p>Prix : <span class="price"></span></p>
+					<a  href="#" class="btn btn-primary ajout">Ajouter au panier</a>
 				</div>
 			</div>
 		</div>
@@ -180,9 +190,9 @@
 				aria-labelledby="staticBackdropLabel"
 				aria-hidden="true"
 			>
-				<div class="position-absolute top-0 end-0 modal-dialog modal_droit">
-					<div class="modal-content">
-						<div class="modal-header">
+				<div class="position-absolute top-0 end-0 modal-dialog modal_droit" >
+					<div class="modal-content lacarte">
+						<div class="modal-header" >
 							<h5 class="modal-title" id="staticBackdropLabel">Mon panier</h5>
 							<button
 								type="button"
@@ -206,51 +216,7 @@
 								Valider la commande
 							</button>
 						</div>
-
-						<div
-							class="card voir_marg mx-3 w-75 modal_droit"
-							style="width: 18rem"
-						>
-							<div class="card-body">
-								<h6 class="card-title">
-									Désignation : <span class="designation"></span>
-								</h6>
-								<p class="card-text">
-									Some quick example text to build on the card title and make up
-									the bulk of the card's content.
-								</p>
-								<form action="">
-									<label for="quantity">Quantité</label>
-									<input class="my-2" type="text" name="" id="quantity" />
-									<p>Prix : <strong></strong></p>
-								</form>
-								<button type="button" class="btn btn-danger danger_droit">
-									Supprimer
-								</button>
-							</div>
-						</div>
-
-						<div
-							class="position-relative card mx-3 w-75 card_modal_droit_2"
-							style="width: 18rem"
-						>
-							<div class="card-body modal_droit">
-								<h6 class="card-title">
-									Désignation : <span class="designation"></span>
-								</h6>
-								<p class="card-text">
-									Some quick example text to build on the card title and make up
-									the bulk of the card's content.
-								</p>
-								<form action="">
-									<label for="quantity">Quantité</label>
-									<input class="my-2" type="text" name="" id="quantity" />
-									<p>Prix : <strong></strong></p>
-								</form>
-								<button type="button" class="btn btn-danger danger_droit">
-									Supprimer
-								</button>
-							</div>
+</div>
 						</div>
 					</div>
 				</div>
