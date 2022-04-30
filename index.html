@@ -115,7 +115,7 @@
 							si vous souhaitez
 						</p>
 						<div class="valide">
-							<p><strong class="fs-4">Total : </strong><strong class="total fs-4"></strong><strong class="fs-4">€</strong></p>
+							<p><strong class="fs-4">Total : </strong><strong class="total fs-4">0</strong><strong class="fs-4">€</strong></p>
 							<button
 								data-bs-toggle="modal"
 								data-bs-target="#infos"
@@ -219,7 +219,7 @@
 			aria-hidden="true"
 		>
 			<div class="modal-dialog">
-				<div class="modal-content">
+				<div class="modal-content confirm_modal">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">
 							Valider mes informations et mon panier
@@ -236,39 +236,32 @@
 					</p>
                     <div class="dflex m-3">
                         <p>
-                        Nom : <span class="valid_nom"></span>
+                        Nom : <strong class="valid_nom"></strong>
                     </p>
                     <p>
-                        Prénom : <span class="valid_prenom"></span>
+                        Prénom : <strong class="valid_prenom"></strong>
                     </p>
                     </div>
                     <div class="dflex m-3">
                         <p>
-                        N°Tel : <span class="valid_tel"></span>
+                        N°Tel : <strong class="valid_tel"></strong>
                     </p>
                     <p>
-                        Email : <span class="valid_email"></span>
+                        Email : <strong class="valid_email"></strong>
                     </p>
                     </div>
                     <div class="dflex m-3">
                         <p>
-                        Adresse : <span class="valid_adress"></span>
+                        Adresse : <strong class="valid_adress"></strong>
                     </p>
                     </div>
-                    <p class="p-3 fs-3">Votre panier</p>
+                    <p class="p-3 fs-3 panier">Votre panier</p>
 					<strong id="valid_product"></strong>
-                    <div>
-                        <p class="m-3">Prix unitaire : <strong></strong></p>
-                        <p class="m-3">Quantité : <strong></strong></p>
-                    </div>
-                    <hr class=" dlfex m-3">
-                    <strong id="valid_product2"></strong>
-                    <div>
-                        <p class="dlfex m-3">Prix unitaire : <strong></strong></p>
-                        <p class="deflex m-3" >Quantité : <strong></strong></p>
-                    </div>
-                    <hr>
-                    <button class="btn btn-primary m-3" type="submit">Finaliser la commande et payer</button>
+					<div class="alert alert-danger alrt_width mx-auto" role="alert">
+						Total à payer : <strong class="a_payer"></strong> €
+					  </div>
+                    
+                    <button class="btn btn-primary m-3 finaliser" type="submit">Finaliser la commande et payer</button>
 				</div>
 			</div>
 		</div>
