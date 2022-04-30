@@ -71,7 +71,7 @@ var ajout = document.querySelectorAll( '.ajout' )
 ajout.forEach( elemente => {
     var nom = elemente.parentNode.childNodes[ 1 ].innerText;
     elemente.addEventListener( 'click', function () {
-        elemente.style.display="none"
+        elemente.style.display = "none"
         var prix = elemente.previousElementSibling.childNodes[ 1 ].innerText.replace( '€', "" )
         $( '.lacarte' ).append( `<div  class=" card-body ">
         <h6 class="card-title">
@@ -122,15 +122,15 @@ ajout.forEach( elemente => {
         supp.forEach( element => {
             $( element ).click( function () {
                 this.parentNode.remove()
-                $('.del').first().remove()
-                elemente.style.display="initial"
+                $( '.del' ).first().remove()
+                elemente.style.display = "initial"
                 //RECALCULE LE PRIX/
                 var sum = 0
                 var couteux = document.querySelectorAll( '.couteux' )
                 for ( let i = 0; i < couteux.length; i++ ) {
                     const element = couteux[ i ];
-                    var product=couteux[ i ].parentNode.parentNode.parentNode.childNodes[1].childNodes[1].outerText
-                    console.log( couteux[ i ].parentNode.parentNode.parentNode.childNodes[1].childNodes[1].outerText)
+                    var product = couteux[ i ].parentNode.parentNode.parentNode.childNodes[ 1 ].childNodes[ 1 ].outerText
+                    console.log( couteux[ i ].parentNode.parentNode.parentNode.childNodes[ 1 ].childNodes[ 1 ].outerText )
                     sum += parseInt( ( element.innerText.replace( '€', '' ) ) * parseInt( couteux[ i ].parentNode.parentNode.childNodes[ 3 ].value ) )
                     document.querySelector( ".total" ).innerText = sum
                     document.querySelector( ".a_payer" ).innerText = sum
@@ -202,6 +202,6 @@ for ( let i = 0; i < inputs.length; i++ ) {
 
 ///rediriger vers la page de confirmation
 
-$('.finaliser').click(function () {
-    window.location.href="valide.html"
-})
+$( '.finaliser' ).click( function () {
+    window.location.href = "valide.html"
+} )
